@@ -1,6 +1,6 @@
 # MySQL [ELZERO WEB SCHOOL]
 
-# 1- Constraint القيود
+##  Constraint القيود
 Types of constraints:
 
 1-Not Null 2- Null
@@ -23,6 +23,7 @@ ALTER TABLE students DROP INDEX username;
 ```
 ALERT TABLE students ADD test varchar(255) NOT NULL UNIQUE;
 ```
+- #### PRIMARY KEY
 خاصية الPRIMARY تنفع لصف واحد فقط
 اضافة الPRIMARY KEY بطريقتين :
 
@@ -44,4 +45,12 @@ CREATE TABLE teacher (
 
 ```
 CREATE TABLE teacher DROP PRIMARY KEY;
+```
+- #### FOREIGN KEY
+```
+CREATE TABLE clients (
+  id int NOT NULL,
+  email varchar(255) unique,
+  PRIMARY KEY(id),
+) ENGINE InnoDB;
 ```
