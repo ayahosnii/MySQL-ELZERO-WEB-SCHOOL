@@ -54,3 +54,12 @@ CREATE TABLE clients (
   PRIMARY KEY(id),
 ) ENGINE InnoDB;
 ```
+```
+CREATE TABLE orders (
+  order_id int NOT NULL,
+  price varchar(255) unique,
+  client_id int NOT NULL,
+  PRIMARY KEY(order_id),
+  PRIMARY KEY(client_id),
+);
+```
