@@ -60,6 +60,6 @@ CREATE TABLE orders (
   price varchar(255) unique,
   client_id int NOT NULL,
   PRIMARY KEY(order_id),
-  PRIMARY KEY(client_id),
+  PRIMARY KEY(client_id) REFERENCES clients(id)
 );
 ```
