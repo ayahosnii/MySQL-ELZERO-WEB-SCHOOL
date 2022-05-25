@@ -85,3 +85,8 @@ CREATE TABLE shopmember (
     ON DELETE CASCADE ON UPDATE CASCADE
     );
     ```
+لجلب كل الClients في Shop معين
+```
+SELECT * FROM clients JOIN shopmember ON clients.id = shopmember.client
+WHERE shopmember.shop = 1;
+```
