@@ -86,7 +86,15 @@ CREATE TABLE shopmember (
     );
     ```
 لجلب كل الClients في Shop معين
+
+
 ```
 SELECT * FROM clients JOIN shopmember ON clients.id = shopmember.client
 WHERE shopmember.shop = 1;
+```
+لجلب كل الـ Shops لـClient معين
+
+```
+SELECT * FROM shops JOIN shopmember ON shops.shop_id = shopmember.shop
+WHERE shopmember.client = 1
 ```
