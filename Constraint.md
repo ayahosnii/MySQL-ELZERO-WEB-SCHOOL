@@ -46,7 +46,7 @@ CREATE TABLE teacher (
 ```
 CREATE TABLE teacher DROP PRIMARY KEY;
 ```
-- #### FOREIGN KEY
+- #### FOREIGN KEY [1- one to one]
 ```
 CREATE TABLE clients (
   id int NOT NULL,
@@ -61,5 +61,12 @@ CREATE TABLE orders (
   client_id int NOT NULL,
   PRIMARY KEY(order_id),
   PRIMARY KEY(client_id) REFERENCES clients(id)
+);
+```
+- #### FOREIGN KEY [3- Many To Many]
+```
+CREATE TABLE shops (
+    shop_id int not null PRIMARY KEY,
+    name varchar(255)
 );
 ```
