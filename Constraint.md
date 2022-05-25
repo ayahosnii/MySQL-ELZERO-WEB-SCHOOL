@@ -70,3 +70,18 @@ CREATE TABLE shops (
     name varchar(255)
 );
 ```
+```
+CREATE TABLE shopmember (
+    clients int NOT null,
+    shop int NOT null,
+    PRIMARY KEY (client, shop),
+    
+    CONSTRAINT cons_clients
+    FOREIGN KEY (client) REFERENCES clients(id)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+    
+    CONSTRAINT cons_shop
+    FOREIGN KEY (shop) REFERENCES shops (shop_id)
+    ON DELETE CASCADE ON UPDATE CASCADE
+    );
+    ```
